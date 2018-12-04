@@ -4,6 +4,9 @@ public class Piso {
 int num_piso;
 ArrayList<Habitacion> piso = new ArrayList<Habitacion>();
 ////////////////////////////////////////////////////////////
+public Piso(int num) {
+	this.num_piso=num;
+}
 public void getHabitacion(String tipo) {
 	Habitacion aux = new Habitacion(tipo); 
 	piso.add(aux);
