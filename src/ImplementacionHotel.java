@@ -5,7 +5,7 @@ public class ImplementacionHotel {
 		// TODO Auto-generated method stub
 		Archivo_Leer texto_ini = new Archivo_Leer();
 		Hotel hot = new Hotel();
-		texto_ini.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\inicializar.txt");
+		texto_ini.leerArchivo("D:\\proyecto_java\\txt\\inicializar.txt");
 		hot.setPresupuesto(Double.parseDouble(texto_ini.getLinea(0)));
 		String aux=texto_ini.getLinea(1);
 		String[] fecha_ = aux.split(" ");
