@@ -20,7 +20,7 @@ public class ImplementacionHotel {
 			aux=texto_ini.getLinea(i+3);
 			String[] hab = aux.split(" ");
 			hot.setPiso(i+1);
-			for (int z=1;z<=Integer.parseInt(hab[0]);i++) {
+			for (int z=1;z<=Integer.parseInt(hab[0]);z++) {
 				hot.setHabitacion(hab[z],i+1);
 			}
 		}
