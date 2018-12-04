@@ -24,5 +24,7 @@ public class ImplementacionHotel {
 				hot.setHabitacion(hab[z],i+1);
 			}
 		}
+		/////////////////////////////////////Precios
+		
 	}
 }
