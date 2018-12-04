@@ -17,4 +17,8 @@ public void getNum(int num) {
 public int setNum() {
 	return num_piso;
 }
+public int getNumCama(int num){
+	return piso.get(num).getCamas_ind();
+	
+}
 }

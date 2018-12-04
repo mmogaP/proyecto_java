@@ -48,4 +48,7 @@ public int getAa() {
 public void setAa(int aa) {
 	this.aa = aa;
 }
+public int getNumCama(int pis,int hab) {
+	return hotel.get(pis).getNumCama(hab);
+}
 }
