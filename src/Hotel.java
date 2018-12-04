@@ -3,14 +3,17 @@ public class Hotel {
 ArrayList<Piso> hotel = new ArrayList<Piso>();
 int mun_pisos;
 int num_habi;
-int presupuesto;
+double presupuesto;
 int dd;
 int mm;
 int aa;
 ///////////////////////////////////////
-public void setPiso() {
-	Piso aux2 = new Piso();
+public void setPiso(int num) {
+	Piso aux2 = new Piso(num);
 	hotel.add(aux2);
+}
+public void setHabitacion(String tipo,int num) {
+	hotel.get(num-1).getHabitacion(tipo);
 }
 public int getMun_pisos() {
 	return mun_pisos;
@@ -24,7 +27,7 @@ public int getNum_habi() {
 public void setNum_habi(int num_habi) {
 	this.num_habi = num_habi;
 }
-public void setPresupuesto(int presupuesto) {
+public void setPresupuesto(double presupuesto) {
 	this.presupuesto = presupuesto;
 }
 public int getDd() {
