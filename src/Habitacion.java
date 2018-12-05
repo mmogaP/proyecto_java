@@ -105,6 +105,8 @@ public void resetHab() {
 	this.cuenta=0.0;
 	this.check_in="";
 	this.check_out="";
-
+}
+public double getCuenta() {
+	return cuenta;
 }
 }

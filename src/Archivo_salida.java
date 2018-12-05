@@ -103,7 +103,7 @@ public class Archivo_salida {
 			}
 		}
 	}
-	public void escribirArch_out(String nombre,String fecha,String hora,String titular,int cuenta) {
+	public void escribirArch_out(String nombre,String fecha,String hora,String titular,double cuenta) {
 		File f;
 		FileWriter w;
 		PrintWriter wr;

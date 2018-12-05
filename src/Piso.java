@@ -62,7 +62,7 @@ public String getNumhabitacion(int habitacion) {
 		return (num+"0"+num_piso);
 	}
 }
-public int getCuenta(int habitacion) {
+public double getCuenta(int habitacion) {
 	piso.get(habitacion).resetHab();
 	return piso.get(habitacion).getCuenta();
 }

@@ -107,8 +107,7 @@ public void estadoIn(int piso,int habitacion) {
 public String numHabitacion(int piso,int habitacion) {
 	return hotel.get(piso).getNumhabitacion(habitacion);
 }
-public int getCuenta(int piso,int habitacion) {
-	hotel.get(piso).resetHab(habitacion);
+public double getCuenta(int piso,int habitacion) {
 	return hotel.get(piso).getCuenta(habitacion);
 }
 

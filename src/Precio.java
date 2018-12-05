@@ -41,5 +41,12 @@ public class Precio {
 		precio_menu.add(precio);
 		nombre_menu.add(nombre);
 	}
-
+	public Double setPrecio(String plato) {
+		for(int i=0;i<formato_menu.size();i++) {
+			if(formato_menu.get(i).equals(plato)) {
+				return precio_menu.get(i);
+			}
+		}
+		return 0.0;
+	}
 }
