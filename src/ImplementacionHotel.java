@@ -152,10 +152,8 @@ public class ImplementacionHotel {
 				Archivo_salida m=new Archivo_salida();
 				for(int y=0;y<hot.getMun_pisos();y++) {
 					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
-						if(hot.getEstado(y,j).equals("Ocupada")) {
-							System.out.println("aqui");
+						if(hot.getEstado(y,j).equals("Ocupado")) {
 							if(hot.getTitular(y, j).equals(linea[0])) {
-								System.out.println("aqui");
 								hot.estadoIn(y,j);
 								m.escribirArch_out("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", hot.getFecha(), linea[1], hot.getTitular(y, j),hot.getCuenta(y,j));
 								fin=true;
@@ -168,6 +166,12 @@ public class ImplementacionHotel {
 					}
 				}
 				i=i+2;
+			}
+			else if(op.getLinea(i).equals("5")) {
+				int cantd_platos = Integer.parseInt(op.getLinea(i+1));
+				for(int z=0;z<cantd_platos;z++) {
+					String plato = op.getLinea(z+i+1);
+				}
 			}
 			
 		}
