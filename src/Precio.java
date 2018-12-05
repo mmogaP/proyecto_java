@@ -41,7 +41,7 @@ public class Precio {
 		precio_menu.add(precio);
 		nombre_menu.add(nombre);
 	}
-	public Double setPrecio(String plato) {
+	public Double getPrecio_menu(String plato) {
 		for(int i=0;i<formato_menu.size();i++) {
 			if(formato_menu.get(i).equals(plato)) {
 				return precio_menu.get(i);
@@ -49,4 +49,12 @@ public class Precio {
 		}
 		return 0.0;
 	}
+	public Double getPrecio_serv(String serv) {
+		for(int i=0;i<formato_serv.size();i++) {
+			if(formato_menu.get(i).equals(serv)) {
+				return precio_serv.get(i);
+			}
+		}
+		return 0.0;
+	}	
 }

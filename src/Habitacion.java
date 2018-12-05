@@ -109,4 +109,7 @@ public void resetHab() {
 public double getCuenta() {
 	return cuenta;
 }
+public void setCuenta(double cuenta) {
+	this.cuenta = cuenta;
+}
 }

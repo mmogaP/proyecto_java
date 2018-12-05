@@ -110,5 +110,8 @@ public String numHabitacion(int piso,int habitacion) {
 public double getCuenta(int piso,int habitacion) {
 	return hotel.get(piso).getCuenta(habitacion);
 }
+public void setCuenta(int piso, int habitacion, double cuenta) {
+	hotel.get(piso).setCuenta(habitacion,cuenta);
+}
 
 }
