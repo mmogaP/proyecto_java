@@ -3,7 +3,7 @@
 1
 18 04 2018 24 04 2018
 DOBLE
-3 
+3
 A 12345678 Alberto Martinez
 A 13456789 Margarita Hernandez
 N Andreina Martinez

@@ -79,5 +79,21 @@ public String getEstado(int piso,int habitacion) {
 public String getTipo(int piso,int habitacion) {
 	return hotel.get(piso).getEstado(habitacion);
 }
+public String getFecha() {
+	return dd+"/"+mm+"/"+aa;
+}
+public String getFecha_in(int piso,int habitacion) {
+	return hotel.get(piso).getFecha_in(habitacion);
+}
+public String getFecha_out(int piso,int habitacion) {
+	return hotel.get(piso).getFecha_out(habitacion);
+}
+public int getDias(int piso,int habitacion){
+	String[] fech_in=hotel.get(piso).getFecha_in(habitacion).split("/");
+	String[] fech_out=hotel.get(piso).getFecha_out(habitacion).split("/");
+	int dia_in=Integer.parseInt(fech_in[0]);
+	int dia_out=Integer.parseInt(fech_out[0]);
+	return dia_out-dia_in;
+}
 
 }

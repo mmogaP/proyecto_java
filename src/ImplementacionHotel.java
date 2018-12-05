@@ -16,7 +16,7 @@ public class ImplementacionHotel {
 		String[] piso = aux.split(" ");
 		hot.setNum_habi(Integer.parseInt(piso[0]));
 		hot.setMun_pisos(Integer.parseInt(piso[1]));
-		for(int i=0;i<(hot.getMun_pisos()-1);i++) {
+		for(int i=0;i<(hot.getMun_pisos());i++) {
 			aux=texto_ini.getLinea(i+3);
 			String[] hab = aux.split(" ");
 			hot.setPiso(i+1);
@@ -70,7 +70,7 @@ public class ImplementacionHotel {
 				boolean fin=false;
 				for(int y=0;y<hot.getMun_pisos();y++) {
 					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
-						if(hot.getEstado(y, j).equals("Libre")&&hot.getTipo(y, j).equals(linea)) {
+						if(hot.getEstado(y, j).equals("Libre")&&(hot.getTipo(y, j).equals(linea))) {
 							habitacion_libre[0]= y;
 							habitacion_libre[1]= j;
 							fin=true;
@@ -101,10 +101,11 @@ public class ImplementacionHotel {
 				hot.getEstado(habitacion_libre[0], habitacion_libre[1]);
 				hot.getReservar(habitacion_libre[0], habitacion_libre[1], adult, infantes, titular);
 				i=i+4+Integer.parseInt(op.getLinea(i+3));
+				Archivo_salida m = new Archivo_salida();
+				m.escribirArch("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt",hot.getFecha(),hot.getFecha_in(habitacion_libre[0], habitacion_libre[1]),hot.getFecha_out(habitacion_libre[0], habitacion_libre[1]),titular,hot.getTipo(habitacion_libre[0], habitacion_libre[1]),hot.getDias(habitacion_libre[0], habitacion_libre[1]));
 			}
+			
 		}
-		Archivo_salida m = new Archivo_salida();
-		m.escribirArch("D:\\proyecto_java\\txt\\reservaciones.txt");
 				
 	}
 }

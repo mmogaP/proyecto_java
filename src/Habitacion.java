@@ -15,8 +15,8 @@ int cant_ad;
 int cant_infantes;
 String titular;
 double cuenta;
-int[] check_in=new int[3];
-int[] check_out=new int[3];
+String check_in;
+String check_out;
 ///////////////////////////////////////
 public Habitacion(String tip) {
 	estado="Libre";
@@ -43,12 +43,8 @@ public Habitacion(String tip) {
 	}
 }
 public void checkFull(int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
-	this.check_in[0]=dd1;
-	this.check_in[1]=mm1;
-	this.check_in[2]=aa1;
-	this.check_out[0]=dd2;
-	this.check_out[1]=mm2;
-	this.check_out[2]=aa2;
+	check_in=dd1+"/"+mm1+"/"+aa1;
+	check_out=dd2+"/"+mm2+"/"+aa2;
 }
  public void recervarHab(int adul,int infantes,String titular) {
 	 this.estado = "Reservado";
@@ -71,5 +67,11 @@ public int getCamas_ind() {
 }
 public int getCamas_mat() {
 	return camas_mat;
+}
+public String fehcaCheck_in() {
+	return check_in;
+}
+public String fehcaCheck_out() {
+	return check_out;
 }
 }

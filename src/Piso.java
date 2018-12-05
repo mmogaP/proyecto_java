@@ -38,4 +38,10 @@ public String getTipo(int habitacion) {
 public void getReservar(int habitacion,int adul,int infantes,String titular) {
 	piso.get(habitacion).recervarHab(adul, infantes, titular);
 }
+public String getFecha_in(int habitacion) {
+	return piso.get(habitacion).fehcaCheck_in();
+}
+public String getFecha_out(int habitacion) {
+	return piso.get(habitacion).fehcaCheck_out();
+}
 }
