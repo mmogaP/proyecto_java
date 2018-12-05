@@ -3,7 +3,7 @@ public class Habitacion {
 int camas_ind;
 int camas_mat;
 String estado;
-int numero_hab;
+String numero_hab;
 String tipo_de_habitacion;
 boolean baño;
 boolean aire;
@@ -18,7 +18,8 @@ double cuenta;
 String check_in;
 String check_out;
 ///////////////////////////////////////
-public Habitacion(String tip) {
+public Habitacion(String tip,String hab) {
+	this.numero_hab=hab;
 	estado="Libre";
 	if (tip.equals("INDIV")) {
 		this.camas_ind = 1;
@@ -53,6 +54,13 @@ public void checkFull(int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
 	 this.titular=titular;
 
 }
+ public void cancelarReserva() {
+	 this.estado="Libre";
+	 this.cant_ad=0;
+	 this.cant_infantes=0;
+	 this.titular="";
+
+ }
  public void agregarCama() {
 	 this.camas_ind += 1;
  }
@@ -73,5 +81,30 @@ public String fehcaCheck_in() {
 }
 public String fehcaCheck_out() {
 	return check_out;
+}
+public String getTitular() {
+	return titular;
+}
+public void estadoIn() {
+	this.estado="Ocupada";
+}
+public String getNumhabitacion() {
+	if(numero_hab.length()==1) {
+	return ("00"+numero_hab);
+	}
+	else {
+	return ("0"+numero_hab);	
+	}
+}
+public void resetHab() {
+	this.estado="Libre";
+	this.num_personas=0;
+	this.cant_ad=0;
+	this.cant_infantes=0;
+	this.titular="";
+	this.cuenta=0.0;
+	this.check_in="";
+	this.check_out="";
+
 }
 }

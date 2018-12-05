@@ -13,7 +13,7 @@ public void setPiso(int num) {
 	hotel.add(aux2);
 }
 public void getReservar(int piso,int habitacion,int adul,int infantes,String titular) {
-	hotel.get(piso).getReservar(habitacion, adul, infantes, titular);
+	hotel.get(piso).setReservar(habitacion, adul, infantes, titular);
 	
 }
 public void checkFull(int piso,int habitacion,int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
@@ -77,7 +77,7 @@ public String getEstado(int piso,int habitacion) {
 	return hotel.get(piso).getEstado(habitacion);
 }
 public String getTipo(int piso,int habitacion) {
-	return hotel.get(piso).getEstado(habitacion);
+	return hotel.get(piso).getTipo(habitacion);
 }
 public String getFecha() {
 	return dd+"/"+mm+"/"+aa;
@@ -94,6 +94,22 @@ public int getDias(int piso,int habitacion){
 	int dia_in=Integer.parseInt(fech_in[0]);
 	int dia_out=Integer.parseInt(fech_out[0]);
 	return dia_out-dia_in;
+}
+public String getTitular(int piso,int habitacion) {
+	return hotel.get(piso).getTitular(habitacion);
+}
+public void cancelarReserva(int piso,int habitacion) {
+	hotel.get(piso).cancelarReserva(habitacion);
+}
+public void estadoIn(int piso,int habitacion) {
+	hotel.get(piso).estadoIn(habitacion);
+}
+public String numHabitacion(int piso,int habitacion) {
+	return hotel.get(piso).getNumhabitacion(habitacion);
+}
+public int getCuenta(int piso,int habitacion) {
+	hotel.get(piso).resetHab(habitacion);
+	return hotel.get(piso).getCuenta(habitacion);
 }
 
 }

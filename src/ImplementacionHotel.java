@@ -102,7 +102,70 @@ public class ImplementacionHotel {
 				hot.getReservar(habitacion_libre[0], habitacion_libre[1], adult, infantes, titular);
 				i=i+4+Integer.parseInt(op.getLinea(i+3));
 				Archivo_salida m = new Archivo_salida();
-				m.escribirArch("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt",hot.getFecha(),hot.getFecha_in(habitacion_libre[0], habitacion_libre[1]),hot.getFecha_out(habitacion_libre[0], habitacion_libre[1]),titular,hot.getTipo(habitacion_libre[0], habitacion_libre[1]),hot.getDias(habitacion_libre[0], habitacion_libre[1]));
+				m.escribirArch_Res("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt",hot.getFecha(),hot.getFecha_in(habitacion_libre[0], habitacion_libre[1]),hot.getFecha_out(habitacion_libre[0], habitacion_libre[1]),titular,hot.getTipo(habitacion_libre[0], habitacion_libre[1]),hot.getDias(habitacion_libre[0], habitacion_libre[1]));
+			}
+			else if(op.getLinea(i).equals("2")) {
+				String[] linea = op.getLinea(i+1).split(" ");
+				boolean fin = false;
+				Archivo_salida m=new Archivo_salida();
+				for(int y=0;y<hot.getMun_pisos();y++) {
+					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
+						if(hot.getEstado(y,j).equals("Reservado")) {
+							if(hot.getTitular(y, j).equals(linea[0])) {
+							hot.cancelarReserva(y,j);
+							m.escribirArch_can("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", hot.getFecha(), linea[1], hot.getTitular(y, j));
+							fin=true;
+							break;
+							}
+						}
+					}
+					if(fin==true) {
+						break;
+					}
+				}
+				i=i+2;	
+			}
+			else if(op.getLinea(i).equals("3")) {
+				String[] linea = op.getLinea(i+1).split(" ");
+				boolean fin =false;
+				Archivo_salida m=new Archivo_salida();
+				for(int y=0;y<hot.getMun_pisos();y++) {
+					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
+						if(hot.getEstado(y,j).equals("Reservado")) {
+							if(hot.getTitular(y, j).equals(linea[0])) {
+								hot.estadoIn(y,j);
+								m.escribirArch_in("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", hot.getFecha(), linea[1], hot.getTitular(y, j),hot.numHabitacion(y,j));
+								fin=true;
+								break;
+							}
+						}
+					}
+					if(fin==true) {
+						break;
+					}
+				}
+				i=i+2;
+			}
+			else if(op.getLinea(i).equals("4")) {
+				String[] linea = op.getLinea(i+1).split(" ");
+				boolean fin =false;
+				Archivo_salida m=new Archivo_salida();
+				for(int y=0;y<hot.getMun_pisos();y++) {
+					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
+						if(hot.getEstado(y,j).equals("Ocupado")) {
+							if(hot.getTitular(y, j).equals(linea[0])) {
+								hot.estadoIn(y,j);
+								m.escribirArch_out("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", hot.getFecha(), linea[1], hot.getTitular(y, j),hot.getCuenta(y,j));
+								fin=true;
+								break;
+							}
+						}
+					}
+					if(fin==true) {
+						break;
+					}
+				}
+				i=i+2;
 			}
 			
 		}
