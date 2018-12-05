@@ -53,7 +53,8 @@ public class ImplementacionHotel {
 			}
 			precio.setMenu(aux2[0], Double.parseDouble(aux2[1]), aux_nombre);
 		}
-		///////////////////////
+		///////////////////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////////////////
 		Archivo_Leer op = new Archivo_Leer();
 		op.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\operaciones.txt");
 		for(int i = 0;i<op.getTamaño();i++) {
@@ -62,11 +63,14 @@ public class ImplementacionHotel {
 				continue;
 			}
 			else if(op.getLinea(i).equals("1")) {
+				String linea = op.getLinea(i+1);
+				String[] check=linea.split(" ");
+				linea = op.getLinea(i+2);
 				int[] habitacion_libre=new int[2];
 				boolean fin=false;
 				for(int y=0;y<hot.getMun_pisos();y++) {
 					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
-						if(hot.getEstado(y, j).equals("Libre")) {
+						if(hot.getEstado(y, j).equals("Libre")&&hot.getTipo(y, j).equals(linea)) {
 							habitacion_libre[0]= y;
 							habitacion_libre[1]= j;
 							fin=true;
@@ -77,11 +81,26 @@ public class ImplementacionHotel {
 						break;
 					}
 				}
-				String linea = op.getLinea(i+1);
-				String[] check=linea.split(" ");
-				linea = op.getLinea(i+2);
 				hot.checkFull(habitacion_libre[0], habitacion_libre[1], Integer.parseInt(check[0]), Integer.parseInt(check[1]), Integer.parseInt(check[2]), Integer.parseInt(check[3]), Integer.parseInt(check[4]), Integer.parseInt(check[5]));
-				
+				String titular="";
+				int adult=0;
+				int infantes=0;
+				for(int y = 0;y<Integer.parseInt(op.getLinea(i+3));y++) {
+					linea=op.getLinea(y+i+4);
+					String[] separacion = linea.split(" ");
+					if(y==0) {
+						titular=separacion[1];
+					}
+					if(separacion[0].equals("A")) {
+						adult++;
+					}
+					else if(separacion[0].equals("N")) {
+						infantes++;
+					}	
+				}
+				hot.getEstado(habitacion_libre[0], habitacion_libre[1]);
+				hot.getReservar(habitacion_libre[0], habitacion_libre[1], adult, infantes, titular);
+				i=i+4+Integer.parseInt(op.getLinea(i+3));
 			}
 		}
 	}

@@ -23,7 +23,7 @@ public int getNumCama(int num){
 	return piso.get(num).getCamas_ind();
 	
 }
-public void getReserva(int habitacion,int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
+public void getCheck(int habitacion,int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
 	this.piso.get(habitacion).checkFull(dd1,mm1,aa1,dd2,mm2,aa2);
 }
 public int getNum_habitaciones_x_piso() {
@@ -31,5 +31,11 @@ public int getNum_habitaciones_x_piso() {
 }
 public String getEstado(int habitacion) {
 	return piso.get(habitacion).getEstado();
+}
+public String getTipo(int habitacion) {
+	return piso.get(habitacion).getTipo();
+}
+public void getReservar(int habitacion,int adul,int infantes,String titular) {
+	piso.get(habitacion).recervarHab(adul, infantes, titular);
 }
 }
