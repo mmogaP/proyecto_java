@@ -27,8 +27,41 @@ public class ImplementacionHotel {
 		/////////////////////////////////////Precios
 		Archivo_Leer texto_pre = new Archivo_Leer();
 		Precio precio = new Precio();
+		texto_pre.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\precios.txt");
 		String parametros = texto_pre.getLinea(0);
 		String[] parametros2 = parametros.split(" ");
 		int num_hab = Integer.parseInt(parametros2[0]);
+		for(int i=0;i<num_hab;i++) {
+			String[] aux2 = (texto_pre.getLinea(i+1)).split(" ");
+			precio.setHabitacion(aux2[0], Double.parseDouble(aux2[1]));
+		}
+		int num_serv=Integer.parseInt(parametros2[1]);
+		for(int i=0;i<num_serv;i++) {
+			String[] aux2 = (texto_pre.getLinea(i+num_hab+1)).split(" ");
+			String aux_nombre = "";
+			for(int z=2;z<aux2.length;z++) {
+				aux_nombre = aux2[z]+" ";
+			}
+			precio.setServicio(aux2[0],Double.parseDouble(aux2[1]), aux_nombre);
+		}
+		int num_menu=Integer.parseInt(parametros2[2]);
+		for(int i=0;i<num_menu;i++) {
+			String[] aux2=(texto_pre.getLinea(i+num_serv+num_hab+1)).split(" ");
+			String aux_nombre="";
+			for(int z = 0;z<aux2.length;z++) {
+				aux_nombre = aux2[z]+" ";
+			}
+			precio.setMenu(aux2[0], Double.parseDouble(aux2[1]), aux_nombre);
+		}
+		///////////////////////
+		Archivo_Leer op = new Archivo_Leer();
+		op.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\operaciones.txt");
+		for(int i = 0;i<op.getTamaño();i++) {
+			if((op.getLinea(i)).equals("0")) {
+				hot.agregarDia();
+				continue;
+			}
+			else if(op.getLinea(i).equals("1"))
+		}
 	}
 }
