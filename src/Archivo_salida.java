@@ -7,6 +7,7 @@ public class Archivo_salida {
 			FileWriter w;
 			BufferedWriter bw;
 			PrintWriter wr;
+			Hotel ho = new Hotel();
 			
 			try {
 				
@@ -15,7 +16,7 @@ public class Archivo_salida {
 				bw = new BufferedWriter(w);
 				wr = new PrintWriter(bw);
 				
-				wr.write(" ");//primera linea
+				wr.write("Reservacion--"+ho.dd+"/"+ho.mm+"/"+ho.aa);//primera linea,  para  agregar variables
 				wr.append(" ");//segunda linea
 				wr.append(""); //tercera linea
 				
