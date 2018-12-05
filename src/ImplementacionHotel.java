@@ -21,7 +21,7 @@ public class ImplementacionHotel {
 			String[] hab = aux.split(" ");
 			hot.setPiso(i+1);
 			for (int z=1;z<=Integer.parseInt(hab[0]);z++) {
-				hot.setHabitacion(hab[z],i+1);
+				hot.setHabitacion(hab[z],i+1,z);
 			}
 		}
 		/////////////////////////////////////Precios
@@ -61,7 +61,28 @@ public class ImplementacionHotel {
 				hot.agregarDia();
 				continue;
 			}
-			else if(op.getLinea(i).equals("1"))
+			else if(op.getLinea(i).equals("1")) {
+				int[] habitacion_libre=new int[2];
+				boolean fin=false;
+				for(int y=0;y<hot.getMun_pisos();y++) {
+					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
+						if(hot.getEstado(y, j).equals("Libre")) {
+							habitacion_libre[0]= y;
+							habitacion_libre[1]= j;
+							fin=true;
+							break;
+						}
+					}
+					if(fin==true) {
+						break;
+					}
+				}
+				String linea = op.getLinea(i+1);
+				String[] check=linea.split(" ");
+				linea = op.getLinea(i+2);
+				hot.checkFull(habitacion_libre[0], habitacion_libre[1], Integer.parseInt(check[0]), Integer.parseInt(check[1]), Integer.parseInt(check[2]), Integer.parseInt(check[3]), Integer.parseInt(check[4]), Integer.parseInt(check[5]));
+				
+			}
 		}
 	}
 }

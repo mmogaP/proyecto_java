@@ -12,6 +12,9 @@ public void setPiso(int num) {
 	Piso aux2 = new Piso(num);
 	hotel.add(aux2);
 }
+public void checkFull(int piso,int habitacion,int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
+	hotel.get(piso).getReserva(habitacion, dd1, mm1, aa1, dd2, mm2, aa2);
+}
 public void agregarDia() {
 	int[] dias = {31,28,31,30,31,30,31,31,30,31,30,31};
 	dd++;
@@ -24,8 +27,8 @@ public void agregarDia() {
 		}
 	}
 }
-public void setHabitacion(String tipo,int num) {
-	hotel.get(num-1).getHabitacion(tipo);
+public void setHabitacion(String tipo,int num,int num_habitacion) {
+	hotel.get(num-1).getHabitacion(tipo,num_habitacion);
 }
 public int getMun_pisos() {
 	return mun_pisos;
@@ -62,5 +65,11 @@ public void setAa(int aa) {
 }
 public int getNumCama(int pis,int hab) {
 	return hotel.get(pis).getNumCama(hab);
+}
+public int getNum_habitaciones_x_piso(int piso) {
+	return hotel.get(piso).num_habitaciones;
+}
+public String getEstado(int piso,int habitacion) {
+	return hotel.get(piso).getEstado(habitacion);
 }
 }
