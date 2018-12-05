@@ -15,9 +15,10 @@ public class Archivo_salida {
 				wr.println("Habitacion "+tipo+" del "+check_in+" al "+check_up+" ("+dias+")");
 				wr.close();				
 				w.close();
+		
 			}
 			catch(IOException e) {
-				System.out.println("no se ha podido crear el archivo"+ e);
+			System.out.println("no se ha podido crear el archivo"+ e);
 			}	
 		}else {
 			try {
