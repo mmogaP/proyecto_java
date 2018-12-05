@@ -12,6 +12,18 @@ public void setPiso(int num) {
 	Piso aux2 = new Piso(num);
 	hotel.add(aux2);
 }
+public void agregarDia() {
+	int[] dias = {31,28,31,30,31,30,31,31,30,31,30,31};
+	dd++;
+	if(dd>dias[mm-1]) {
+		dd=1;
+		mm++;
+		if(mm>12) {
+			aa++;
+			mm=1;
+		}
+	}
+}
 public void setHabitacion(String tipo,int num) {
 	hotel.get(num-1).getHabitacion(tipo);
 }
