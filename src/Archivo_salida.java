@@ -1,18 +1,31 @@
 import java.io.*;
 
 public class Archivo_salida {
-	
-	public static void main(String[] args) {
-		File archivo1;
-		try {
+		
+		public void escribirArch(String nombre) {
+			File f;
+			FileWriter w;
+			BufferedWriter bw;
+			PrintWriter wr;
 			
-			archivo1 = new File("D:\\proyecto_java\\txt\\reservaciones.txt");
-			if(archivo1.createNewFile()) {
-				System.out.println("Se ha creado el archivo");
+			try {
+				
+				f = new File(nombre);
+				w = new FileWriter(f);
+				bw = new BufferedWriter(w);
+				wr = new PrintWriter(bw);
+				
+				wr.write(" ");//primera linea
+				wr.append(" ");//segunda linea
+				wr.append(""); //tercera linea
+				
+				wr.close();
+				bw.close();
 				
 			}
-		}catch(IOException e) {
-			System.out.println("no se ha podido crear el archivo"+ e);
-		}
+			catch(IOException e) {
+				System.out.println("no se ha podido crear el archivo"+ e);
+			}	
+		
+		}	
 	}
-}

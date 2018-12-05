@@ -84,5 +84,9 @@ public class ImplementacionHotel {
 				
 			}
 		}
+		Archivo_salida m = new Archivo_salida();
+		m.escribirArch("D:\\proyecto_java\\txt\\reservaciones.txt");
+				
 	}
 }
+
