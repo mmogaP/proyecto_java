@@ -96,20 +96,13 @@ public String getNumhabitacion() {
 	return ("0"+numero_hab);	
 	}
 }
-public void resetHab() {
-	this.estado="Libre";
-	this.num_personas=0;
-	this.cant_ad=0;
-	this.cant_infantes=0;
-	this.titular="";
-	this.cuenta=0.0;
-	this.check_in="";
-	this.check_out="";
-}
+
 public double getCuenta() {
+	System.out.println(cuenta);
 	return cuenta;
 }
 public void setCuenta(double cuenta) {
-	this.cuenta = cuenta;
+	this.cuenta =this.cuenta+cuenta;
+	System.out.println(cuenta);
 }
 }

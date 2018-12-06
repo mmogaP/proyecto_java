@@ -60,7 +60,6 @@ public class ImplementacionHotel {
 		for(int i = 0;i<op.getTamaño();i++) {
 			if((op.getLinea(i)).equals("0")) {
 				hot.agregarDia();
-				continue;
 			}
 			else if(op.getLinea(i).equals("1")) {
 				String linea = op.getLinea(i+1);
@@ -100,7 +99,7 @@ public class ImplementacionHotel {
 				}
 				hot.getEstado(habitacion_libre[0], habitacion_libre[1]);
 				hot.getReservar(habitacion_libre[0], habitacion_libre[1], adult, infantes, titular);
-				i=i+4+Integer.parseInt(op.getLinea(i+3));
+				i=i+3+Integer.parseInt(op.getLinea(i+3));
 				Archivo_salida m = new Archivo_salida();
 				m.escribirArch_Res("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt",hot.getFecha(),hot.getFecha_in(habitacion_libre[0], habitacion_libre[1]),hot.getFecha_out(habitacion_libre[0], habitacion_libre[1]),titular,hot.getTipo(habitacion_libre[0], habitacion_libre[1]),hot.getDias(habitacion_libre[0], habitacion_libre[1]));
 			}
@@ -144,7 +143,7 @@ public class ImplementacionHotel {
 						break;
 					}
 				}
-				i=i+2;
+				i=i+1;
 			}
 			else if(op.getLinea(i).equals("4")) {
 				String[] linea = op.getLinea(i+1).split(" ");
@@ -153,8 +152,7 @@ public class ImplementacionHotel {
 				for(int y=0;y<hot.getMun_pisos();y++) {
 					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
 						if(hot.getEstado(y,j).equals("Ocupada")) {
-							if(hot.getTitular(y, j).equals(linea[0])) {
-								hot.estadoIn(y,j);
+							if(hot.getTitular(y,j).equals(linea[0])) {
 								m.escribirArch_out("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", hot.getFecha(), linea[1], hot.getTitular(y, j),hot.getCuenta(y,j));
 								fin=true;
 								break;
@@ -172,29 +170,33 @@ public class ImplementacionHotel {
 				String titular = op.getLinea(i+1);
 				for(int y=0;y<hot.getMun_pisos();y++) {
 					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
-						if(hot.getTitular(y, j).equals(titular)) {
-							habitacion_libre[0] = y;
-							habitacion_libre[1] = j;
-							break;
+						if(hot.getEstado(y, j).equals("Ocupada")) {
+							if(hot.getTitular(y, j).equals(titular)) {
+								System.out.println("ok");
+								habitacion_libre[0] = y;
+								habitacion_libre[1] = j;
+								break;
+							}
 						}
 					}
 				}
 				int cantidad_serv = Integer.parseInt(op.getLinea(i+2));
-				double precio_s=0.0; 
+				double precio_s=0.0;
 				for(int y=0; y<cantidad_serv;y++) {
-					String[] serv = op.getLinea(y+i+2).split(" ");
+					String[] serv = op.getLinea(y+i+3).split(" ");
 					precio_s = precio_s + (precio.getPrecio_serv(serv[0])) * Integer.parseInt(serv[1]);
 				}
-				if(op.getLinea(i+2+cantidad_serv+1).equals("5")) {
-					int cantd_platos = Integer.parseInt(op.getLinea(i+2+cantidad_serv+1+1));
+				if(op.getLinea(i+3+cantidad_serv).equals("5")) {
+					int cantd_platos = Integer.parseInt(op.getLinea(i+3+cantidad_serv));
 					double precio_m=0.0;
 					for(int z=0;z<cantd_platos;z++) {
-						String plato = op.getLinea(z+i+1);
+						String plato = op.getLinea(z+i+4+cantidad_serv);
 						precio_m = precio_m + precio.getPrecio_menu(plato); 
 					}
 					double cuenta_f = precio_m + precio_s;
+					System.out.println(habitacion_libre[0]+" "+habitacion_libre[1]);
 					hot.setCuenta(habitacion_libre[0], habitacion_libre[1], cuenta_f);
-					i=i+2+cantidad_serv+1+1+cantd_platos;
+					i=i+3+cantidad_serv+cantd_platos;
 				}
 				
 			}
