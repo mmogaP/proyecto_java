@@ -41,6 +41,24 @@ public class Precio {
 		precio_menu.add(precio);
 		nombre_menu.add(nombre);
 	}
+	public double getPrecio_hab(String tipo) {
+		if (tipo.equals("INDIV")) {
+			return precioind;
+		}
+		else if(tipo.equals("DOUBLE")){
+			return preciodob;
+		}
+		else if(tipo.equals("MATRI")) {
+			return preciomat;
+		}
+		else if(tipo.equals("CUADR")) {
+			return preciocua;
+		}
+		else if(tipo.equals("SUITE")) {
+			return preciosui;
+		}
+		return 0.0;
+	}
 	public Double getPrecio_menu(String plato) {
 		for(int i=0;i<formato_menu.size();i++) {
 			if(formato_menu.get(i).equals(plato)) {

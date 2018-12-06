@@ -81,6 +81,7 @@ public class ImplementacionHotel {
 					}
 				}
 				hot.checkFull(habitacion_libre[0], habitacion_libre[1], Integer.parseInt(check[0]), Integer.parseInt(check[1]), Integer.parseInt(check[2]), Integer.parseInt(check[3]), Integer.parseInt(check[4]), Integer.parseInt(check[5]));
+				hot.setCuenta(habitacion_libre[0], habitacion_libre[1], precio.getPrecio_hab(linea));
 				String titular="";
 				int adult=0;
 				int infantes=0;
