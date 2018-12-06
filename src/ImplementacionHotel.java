@@ -172,7 +172,6 @@ public class ImplementacionHotel {
 					for(int j=0;j<hot.getNum_habitaciones_x_piso(y);j++) {
 						if(hot.getEstado(y, j).equals("Ocupada")) {
 							if(hot.getTitular(y, j).equals(titular)) {
-								System.out.println("ok");
 								habitacion_libre[0] = y;
 								habitacion_libre[1] = j;
 								break;
@@ -194,7 +193,6 @@ public class ImplementacionHotel {
 						precio_m = precio_m + precio.getPrecio_menu(plato); 
 					}
 					double cuenta_f = precio_m + precio_s;
-					System.out.println(habitacion_libre[0]+" "+habitacion_libre[1]);
 					hot.setCuenta(habitacion_libre[0], habitacion_libre[1], cuenta_f);
 					i=i+3+cantidad_serv+cantd_platos;
 				}

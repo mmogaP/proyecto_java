@@ -51,7 +51,7 @@ public class Precio {
 	}
 	public Double getPrecio_serv(String serv) {
 		for(int i=0;i<formato_serv.size();i++) {
-			if(formato_menu.get(i).equals(serv)) {
+			if(formato_serv.get(i).equals(serv)) {
 				return precio_serv.get(i);
 			}
 		}

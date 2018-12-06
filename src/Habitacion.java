@@ -98,11 +98,9 @@ public String getNumhabitacion() {
 }
 
 public double getCuenta() {
-	System.out.println(cuenta);
 	return cuenta;
 }
 public void setCuenta(double cuenta) {
 	this.cuenta =this.cuenta+cuenta;
-	System.out.println(cuenta);
 }
 }
