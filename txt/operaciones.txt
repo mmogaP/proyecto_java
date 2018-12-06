@@ -11,6 +11,17 @@ N Andreina Martinez
 0
 3
 12345678 14:05
+6
+12345678
+2
+CAM_A 6
+CAJ_F 4
+5
+4
+ESP_C
+LOM_M
+JUG_L
+MALTA
 0
 0
 0
