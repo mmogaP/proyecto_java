@@ -18,7 +18,7 @@ public class Precio {
 		if (tipo.equals("INDIV")) {
 			this.precioind=precio;
 		}
-		else if(tipo.equals("DOUBLE")){
+		else if(tipo.equals("DOBLE")){
 			this.preciodob=precio;
 		}
 		else if(tipo.equals("MATRI")) {
@@ -45,7 +45,7 @@ public class Precio {
 		if (tipo.equals("INDIV")) {
 			return precioind;
 		}
-		else if(tipo.equals("DOUBLE")){
+		else if(tipo.equals("DOBLE")){
 			return preciodob;
 		}
 		else if(tipo.equals("MATRI")) {
