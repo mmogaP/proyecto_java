@@ -199,8 +199,14 @@ public class ImplementacionHotel {
 				
 			}
 			
-		}
-				
+			else if(op.getLinea(i).equals("7")) {
+				String report = op.getLinea(i+1);
+				int reporte = Integer.parseInt(report);
+				for(int y=0;y<reporte;y++) {
+					
+				}
+			}			
+		}				
 	}
 }
 
