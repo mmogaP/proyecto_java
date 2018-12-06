@@ -203,7 +203,7 @@ public class ImplementacionHotel {
 			else if(op.getLinea(i).equals("7")) {
 				int reporte = Integer.parseInt(op.getLinea(i+1));
 				for(int y=0;y<reporte;y++) {
-					
+					String[] reportes_i = op.getLinea(i+2).split("");
 				}
 			}			
 		}				
