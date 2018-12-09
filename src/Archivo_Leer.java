@@ -11,7 +11,7 @@ public void leerArchivo(String direccion) {
 		}
 		bf.close();
 	}catch(Exception e) {
-		System.out.println("Wea mala");
+		System.out.println("No se encuentra el archivo");
 	}
 }
 public String getLinea(int num) {
