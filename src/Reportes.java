@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class Reportes {
-	public void conprobar_Canceladas(String direccion,String fecha) {
+	public void conprobar_Canceladas(String direccion,String fecha,) {
 		int dd,mm,aa;
 		
 		try {
@@ -14,8 +14,6 @@ public class Reportes {
 				if(lineas[0].equals("CANCELACIÓN--") ) {
 					lineas=lineas[1].split(" ");
 					lineas=lineas[0].split("/");
-					dd=Integer.parseInt(lineas[0]);
-					mm=Integer.parseInt(lineas[2]);
 					aa=Integer.parseInt(lineas[3]);
 					if()
 				}
