@@ -204,7 +204,11 @@ public class ImplementacionHotel {
 				int reporte = Integer.parseInt(op.getLinea(i+1));
 				for(int y=0;y<reporte;y++) {
 					String[] reportes_i = op.getLinea(i+2).split("");
+					Reportes rep = new Reportes();
 					if(reportes_i[0].equals("a")) {
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						int num = rep.conprobar_Canceladas("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", fecha1, fecha2);
 						
 					}
 					else if (reportes_i[0].equals("b")) {
