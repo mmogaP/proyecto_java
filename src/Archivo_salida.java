@@ -45,7 +45,7 @@ public class Archivo_salida {
 				f.createNewFile();
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("RESERVACION--"+"("+fecha+" "+hora+")");
+				wr.println("CANCELACIÓN--"+"("+fecha+" "+hora+")");
 				wr.println(" Titular: "+titular);
 				wr.close();				
 				w.close();

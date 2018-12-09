@@ -204,6 +204,39 @@ public class ImplementacionHotel {
 				int reporte = Integer.parseInt(op.getLinea(i+1));
 				for(int y=0;y<reporte;y++) {
 					String[] reportes_i = op.getLinea(i+2).split("");
+					if(reportes_i[0].equals("a")) {
+						
+					}
+					else if (reportes_i[0].equals("b")) {
+						
+					}
+					else if (reportes_i[0].equals("c")) {
+						
+					}
+					else if (reportes_i[0].equals("d")) {
+						
+					}
+					else if (reportes_i[0].equals("e")) {
+						
+					}
+					else if (reportes_i[0].equals("f")) {
+						
+					}
+					else if (reportes_i[0].equals("g")) {
+						
+					}
+					else if (reportes_i[0].equals("h")) {
+						
+					}
+					else if (reportes_i[0].equals("i")) {
+						
+					}
+					else if (reportes_i[0].equals("j")) {
+						
+					}
+					else if (reportes_i[0].equals("k")) {
+						
+					}
 				}
 			}			
 		}				
