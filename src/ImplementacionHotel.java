@@ -201,6 +201,7 @@ public class ImplementacionHotel {
 			}
 			
 			else if(op.getLinea(i).equals("7")) {
+				Archivo_salida salida = new Archivo_salida();
 				int reporte = Integer.parseInt(op.getLinea(i+1));
 				for(int y=0;y<reporte;y++) {
 					String[] reportes_i = op.getLinea(i+2).split("");
@@ -208,11 +209,14 @@ public class ImplementacionHotel {
 					if(reportes_i[0].equals("a")) {
 						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
 						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
-						int num = rep.conprobar_Canceladas("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", fecha1, fecha2);
-						
+						int cant = rep.conprobar_Canceladas("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", fecha1, fecha2);
+						salida.escribir_Archc("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", fecha1, fecha2, cant);
 					}
 					else if (reportes_i[0].equals("b")) {
-						
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						int cant = rep.conprobar_Efectivas("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt", fecha1, fecha2);
+						salida.escribir_Arche("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", fecha1, fecha2, cant);	
 					}
 					else if (reportes_i[0].equals("c")) {
 						
@@ -236,10 +240,38 @@ public class ImplementacionHotel {
 						
 					}
 					else if (reportes_i[0].equals("j")) {
-						
+						int cant=0;
+						for(int z=0;z<hot.getMun_pisos();z++) {
+							for(int j=0;j<hot.getNum_habitaciones_x_piso(z);j++) {
+								if(hot.getEstado(z, j).equals("Ocupada")) {
+									cant++;
+								}
+							}
+						}
+						salida.escribir_Archo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", hot.getFecha(), cant);
 					}
 					else if (reportes_i[0].equals("k")) {
-						
+						int cant=0;
+						for(int z=0;z<hot.getMun_pisos();z++) {
+							for(int j=0;j<hot.getNum_habitaciones_x_piso(z);j++) {
+								if(hot.getEstado(z, j).equals("Reservado")) {
+									cant++;
+								}
+							}
+						}
+						salida.escribir_Archr("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", hot.getFecha(), cant);
+					}
+					else if (reportes_i[0].equals("l")) {
+						int cant=0;
+						for(int z=0;z<hot.getMun_pisos();z++) {
+							for(int j=0;j<hot.getNum_habitaciones_x_piso(z);j++) {
+								if(hot.getEstado(z, j).equals("Libre")) {
+									cant++;
+								}
+							}
+						}
+						salida.escribir_Archl("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", hot.getFecha(), cant);
+					
 					}
 				}
 			}			
