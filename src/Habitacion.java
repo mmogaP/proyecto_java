@@ -103,4 +103,31 @@ public double getCuenta() {
 public void setCuenta(double cuenta) {
 	this.cuenta =this.cuenta+cuenta;
 }
+public void setReinicio() {
+	this.setReinicio_tip(this.getTipo());
+}
+public void setReinicio_tip(String tipo) {
+	estado="Libre";
+	if (tipo.equals("INDIV")) {
+		this.camas_ind = 1;
+		this.tipo_de_habitacion = "INDV";
+	}
+	else if(tipo.equals("DOBLE")) {
+		this.camas_ind = 2;
+		this.tipo_de_habitacion = "DOBLE";
+	}
+	else if(tipo.equals("MATRI")) {
+		this.camas_mat = 1;
+		this.tipo_de_habitacion = "MATRI";
+	}
+	else if(tipo.equals("CUADR")) {
+		this.camas_ind = 4;
+		this.tipo_de_habitacion = "CUADR";
+	}
+	else if(tipo.equals("SUITE")) {
+		this.camas_mat = 2;
+		this.camas_ind = 5;
+		this.tipo_de_habitacion = "SUITE";
+	}
+}
 }

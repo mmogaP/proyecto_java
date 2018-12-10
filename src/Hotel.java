@@ -8,6 +8,9 @@ int dd;
 int mm;
 int aa;
 ///////////////////////////////////////
+public void gastoM() {
+	this.presupuesto=presupuesto - 25000.00;
+}
 public void setPiso(int num) {
 	Piso aux2 = new Piso(num);
 	hotel.add(aux2);
@@ -48,6 +51,9 @@ public void setNum_habi(int num_habi) {
 }
 public void setPresupuesto(double presupuesto) {
 	this.presupuesto = presupuesto;
+}
+public void sumPresupuesto(double valor) {
+	this.presupuesto+=valor;
 }
 public int getDd() {
 	return dd;
@@ -112,6 +118,12 @@ public double getCuenta(int piso,int habitacion) {
 }
 public void setCuenta(int piso, int habitacion, double cuenta) {
 	hotel.get(piso).setCuenta(habitacion,cuenta);
+}
+public double getSaldo() {
+	return presupuesto;
+}
+public void setReinicio(int piso, int habitacion) {
+	hotel.get(piso).setReinicio(habitacion);
 }
 
 }
