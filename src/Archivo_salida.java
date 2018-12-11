@@ -210,7 +210,7 @@ public class Archivo_salida {
 				f.createNewFile();
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Reservaciones ocupadas");
+				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Habitaciones ocupadas");
 				wr.close();				
 				w.close();
 		
@@ -222,7 +222,7 @@ public class Archivo_salida {
 			try {
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Reservaciones ocupadas");
+				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Habitaciones ocupadas");
 				wr.close();		
 				w.close();
 			}
@@ -241,7 +241,7 @@ public class Archivo_salida {
 				f.createNewFile();
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Reservaciones recervadas");
+				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Habitaciones recervadas");
 				wr.close();				
 				w.close();
 		
@@ -253,7 +253,7 @@ public class Archivo_salida {
 			try {
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Reservaciones reservadas");
+				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Habitaciones reservadas");
 				wr.close();		
 				w.close();
 			}
@@ -272,7 +272,7 @@ public class Archivo_salida {
 				f.createNewFile();
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Reservaciones libres");
+				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Habitaciones libres");
 				wr.close();				
 				w.close();
 		
@@ -284,7 +284,7 @@ public class Archivo_salida {
 			try {
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Reservaciones libres");
+				wr.println("Al  "+fecha1+" "+cant+"                 			"+"Habitaciones libres");
 				wr.close();		
 				w.close();
 			}
@@ -457,9 +457,6 @@ public class Archivo_salida {
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
 				wr.println("Del  "+fecha1+" al "+fecha2+" "+total+"%    			"+"Promedio de % de ocupacion diaria");
-				for(int i = 0;i<porcentajes.length;i++) {
-					wr.println("                             "+porcentajes[i] + "          Dia"+(i+1));
-				}
 				wr.close();		
 				w.close();
 			}

@@ -77,19 +77,20 @@ public class Reportes {
 			BufferedReader bf = new BufferedReader(new FileReader(direccion));
 			String linea;
 			String[] lineas;
-			String c = "|";
+			String[] fech;
+			String c = "\\|";
 			while((linea = bf.readLine()) != null){
 				lineas = linea.split(c);
-				if(lineas[4].equals("Cama Adicional") ) {
-					lineas=lineas[0].split("/");
-					String l=lineas[2].replace(" ", "");
+				if(lineas[4].equals("Cama Adicional ") ) {
+					fech=lineas[0].split("/");
+					String l=fech[2].replace(" ", "");
 					aa=Integer.parseInt(l);
 					if(aa>=(Integer.parseInt(fecha1[2])) && aa<=(Integer.parseInt(fecha2[2]))) {
-						mm = Integer.parseInt(lineas[1]);
+						mm = Integer.parseInt(fech[1]);
 						if(mm>=(Integer.parseInt(fecha1[1]))&& mm<=(Integer.parseInt(fecha2[1]))) {
-							dd=Integer.parseInt(lineas[0]);
+							dd=Integer.parseInt(fech[0]);
 							if(dd>=(Integer.parseInt(fecha1[0]))&&dd<=(Integer.parseInt(fecha2[0]))) {
-								cant++;
+								cant+=Double.parseDouble(lineas[1]);
 							}
 						}
 					}
@@ -110,19 +111,20 @@ public class Reportes {
 			BufferedReader bf = new BufferedReader(new FileReader(direccion));
 			String linea;
 			String[] lineas;
-			String c = "|";
+			String[] fech;
+			String c = "\\|";
 			while((linea = bf.readLine()) != null){
 				lineas = linea.split(c);
 				if(lineas[4].equals("Caja Fuerte ") ) {
-					lineas=lineas[0].split("/");
-					String l=lineas[2].replace(" ", "");
+					fech=lineas[0].split("/");
+					String l=fech[2].replace(" ", "");
 					aa=Integer.parseInt(l);
 					if(aa>=(Integer.parseInt(fecha1[2])) && aa<=(Integer.parseInt(fecha2[2]))) {
-						mm = Integer.parseInt(lineas[1]);
+						mm = Integer.parseInt(fech[1]);
 						if(mm>=(Integer.parseInt(fecha1[1]))&& mm<=(Integer.parseInt(fecha2[1]))) {
-							dd=Integer.parseInt(lineas[0]);
+							dd=Integer.parseInt(fech[0]);
 							if(dd>=(Integer.parseInt(fecha1[0]))&&dd<=(Integer.parseInt(fecha2[0]))) {
-								cant++;
+								cant+=Double.parseDouble(lineas[1]);
 							}
 						}
 					}
@@ -147,7 +149,7 @@ public class Reportes {
 			while((linea = bf.readLine()) != null){
 				lineas = linea.split(c);
 				lineas=lineas[0].split("/");
-				System.out.println(lineas[0]);
+				if(lineas[0].equals("FECHA     ")!=true) {
 				String l=lineas[2].replace(" ", "");
 				aa=Integer.parseInt(l);
 				if(aa>=(Integer.parseInt(fecha1[2])) && aa<=(Integer.parseInt(fecha2[2]))) {
@@ -158,6 +160,7 @@ public class Reportes {
 							cant++;
 						}
 					}
+				}
 				}
 			}
 		bf.close();
