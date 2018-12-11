@@ -214,7 +214,8 @@ public class ImplementacionHotel {
 				Archivo_salida salida = new Archivo_salida();
 				int reporte = Integer.parseInt(op.getLinea(i+1));
 				for(int y=0;y<reporte;y++) {
-					String[] reportes_i = op.getLinea(i+2).split(" ");
+					String[] reportes_i = op.getLinea(i+2+y).split(" ");
+					System.out.println(reportes_i[0]);
 					Reportes rep = new Reportes();
 					if(reportes_i[0].equals("a")) {
 						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
@@ -232,22 +233,39 @@ public class ImplementacionHotel {
 						
 					}
 					else if (reportes_i[0].equals("d")) {
-						
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						double cant = rep.ingresos_Cama("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt",fecha1,fecha2);
+						salida.escrbir_Archcamas("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\reportes.txt", fecha1, fecha2, cant);	
 					}
 					else if (reportes_i[0].equals("e")) {
 						
 					}
 					else if (reportes_i[0].equals("f")) {
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						int cant = rep.cant_Acciones("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", fecha1, fecha2);
+						salida.escrbir_Archcantidad("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\reportes.txt", fecha1, fecha2, cant);
 						
 					}
 					else if (reportes_i[0].equals("g")) {
-						
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						double cant = rep.ingresos_Caja("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt",fecha1,fecha2);
+						salida.escrbir_Archcamas("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\reportes.txt", fecha1, fecha2, cant);
 					}
 					else if (reportes_i[0].equals("h")) {
-						
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						String text = rep.cantDias(fecha1, fecha2, hot.getNum_habi());
+						System.out.println(text);
+						salida.escribirPorcentaje("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\reportes.txt", text, fecha1, fecha2);
 					}
 					else if (reportes_i[0].equals("i")) {
-						
+						String fecha1=reportes_i[1]+"/"+reportes_i[2]+"/"+reportes_i[3];
+						String fecha2=reportes_i[4]+"/"+reportes_i[5]+"/"+reportes_i[6];
+						String text = rep.cantDias(fecha1, fecha2, hot.getNum_habi());
+						salida.promPorcentaje("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\reportes.txt", text, fecha1, fecha2);
 					}
 					else if (reportes_i[0].equals("j")) {
 						int cant=0;
