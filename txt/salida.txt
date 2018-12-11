@@ -1,9 +1,117 @@
-RESERVACION--(16/4/2018)
+RESERVACIÓN--(16/4/2018)
  Titular: 12345678
  Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
 CHECK_IN-----(18/4/2018 14:05)
  Titular: 12345678
  Habitacion: 003001
-CHECK_OUT-----(24/4/2018 10:50)
+CHECK_OUT-----(22/4/2018 10:50)
  Titular: 12345678
- Cancelo: 642.5
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0
+RESERVACIÓN--(16/4/2018)
+ Titular: 12345678
+ Habitacion DOBLE del 18/4/2018 al 24/4/2018 (6)
+CHECK_IN-----(18/4/2018 14:05)
+ Titular: 12345678
+ Habitacion: 003001
+CHECK_OUT-----(22/4/2018 10:50)
+ Titular: 12345678
+ Cancelo: 1200.0

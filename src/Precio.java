@@ -18,7 +18,7 @@ public class Precio {
 		if (tipo.equals("INDIV")) {
 			this.precioind=precio;
 		}
-		else if(tipo.equals("DOUBLE")){
+		else if(tipo.equals("DOBLE")){
 			this.preciodob=precio;
 		}
 		else if(tipo.equals("MATRI")) {
@@ -45,7 +45,7 @@ public class Precio {
 		if (tipo.equals("INDIV")) {
 			return precioind;
 		}
-		else if(tipo.equals("DOUBLE")){
+		else if(tipo.equals("DOBLE")){
 			return preciodob;
 		}
 		else if(tipo.equals("MATRI")) {
@@ -75,4 +75,20 @@ public class Precio {
 		}
 		return 0.0;
 	}	
+	public String getNombre_serv(String tipo) {
+		for(int i = 0;i<formato_serv.size();i++) {
+			if(formato_serv.get(i).equals(tipo)) {
+				return nombre_serv.get(i);
+			}
+		}
+		return "";
+	}
+	public String getNombre_menu(String tipo) {
+		for(int i = 0;i<formato_menu.size();i++) {
+			if(formato_menu.get(i).equals(tipo)) {
+				return nombre_menu.get(i);
+			}
+		}
+		return "";
+	}
 }
