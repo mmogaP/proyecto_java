@@ -1,0 +1,48 @@
+Del 14/04/2018 al 22/04/2018 1			Reservaciones efectivas
+Del  14/04/2018 al 22/04/2018       			% de ocupacion diaria
+                             0%          Dia1
+                             0%          Dia2
+                             0%          Dia3
+                             0%          Dia4
+                             16%          Dia5
+                             16%          Dia6
+                             16%          Dia7
+                             16%          Dia8
+Del  14/04/2018 al 22/04/2018 8			Transferencias totales
+Del  14/04/2018 al 22/04/2018 300.0			Ingresos por camas adicionales
+Del 14/04/2018 al 22/04/2018 2			Reservaciones efectivas
+Del  14/04/2018 al 22/04/2018       			% de ocupacion diaria
+                             0%          Dia1
+                             0%          Dia2
+                             0%          Dia3
+                             0%          Dia4
+                             33%          Dia5
+                             33%          Dia6
+                             33%          Dia7
+                             33%          Dia8
+Del  14/04/2018 al 22/04/2018 17			Transferencias totales
+Del  14/04/2018 al 22/04/2018 600.0			Ingresos por camas adicionales
+Del 14/04/2018 al 22/04/2018 3			Reservaciones efectivas
+Del  14/04/2018 al 22/04/2018       			% de ocupacion diaria
+                             0%          Dia1
+                             0%          Dia2
+                             0%          Dia3
+                             0%          Dia4
+                             50%          Dia5
+                             50%          Dia6
+                             50%          Dia7
+                             50%          Dia8
+Del  14/04/2018 al 22/04/2018 26			Transferencias totales
+Del  14/04/2018 al 22/04/2018 900.0			Ingresos por camas adicionales
+Del 14/04/2018 al 22/04/2018 4			Reservaciones efectivas
+Del  14/04/2018 al 22/04/2018       			% de ocupacion diaria
+                             0%          Dia1
+                             0%          Dia2
+                             0%          Dia3
+                             0%          Dia4
+                             66%          Dia5
+                             66%          Dia6
+                             66%          Dia7
+                             66%          Dia8
+Del  14/04/2018 al 22/04/2018 35			Transferencias totales
+Del  14/04/2018 al 22/04/2018 1200.0			Ingresos por camas adicionales

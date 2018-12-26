@@ -1,0 +1,90 @@
+RESERVACION--(9/7/2011)
+ Titular: 11111111
+ Habitacion INDV del 17/7/2011 al 19/7/2011 (2)
+RESERVACION--(9/7/2011)
+ Titular: 21111111
+ Habitacion INDV del 19/7/2011 al 22/7/2011 (3)
+RESERVACION--(10/7/2011)
+ Titular: 31111111
+ Habitacion INDV del 11/7/2011 al 13/7/2011 (2)
+RESERVACION--(11/7/2011)
+ Titular: 41111111
+ Habitacion INDV del 12/7/2011 al 15/7/2011 (3)
+CHECK_IN-----(12/7/2011 15:02)
+ Titular: 41111111
+ Habitacion: 001001
+RESERVACION--(14/7/2011)
+ Titular: 51111111
+ Habitacion INDV del 16/7/2011 al 22/7/2011 (6)
+RESERVACION--(15/7/2011)
+ Titular: 99111111
+ Habitacion MATRI del 16/7/2011 al 18/7/2011 (2)
+RESERVACION--(15/7/2011)
+ Titular: 98811111
+ Habitacion INDV del 19/7/2011 al 22/7/2011 (3)
+RESERVACION--(22/7/2011)
+ Titular: 61111111
+ Habitacion SUITE del 27/7/2011 al 5/8/2011 (-22)
+RESERVACION--(22/7/2011)
+ Titular: 81111111
+ Habitacion INDV del 29/7/2011 al 2/8/2011 (-27)
+RESERVACION--(22/7/2011)
+ Titular: 12345678
+ Habitacion INDV del 25/7/2011 al 2/8/2011 (-23)
+RESERVACION--(22/7/2011)
+ Titular: 12345679
+ Habitacion INDV del 3/8/2011 al 5/8/2011 (2)
+CHECK_IN-----(25/7/2011 17:33)
+ Titular: 61111111
+ Habitacion: 002002
+RESERVACION--(26/7/2011)
+ Titular: 13246578
+ Habitacion INDV del 29/7/2011 al 6/8/2011 (-23)
+CHECK_OUT-----(28/7/2011 9:00)
+ Titular: 61111111
+ Cancelo: -19800.0
+RESERVACION--(9/7/2011)
+ Titular: 11111111
+ Habitacion INDV del 17/7/2011 al 19/7/2011 (2)
+RESERVACION--(10/7/2011)
+ Titular: 21111111
+ Habitacion INDV del 19/7/2011 al 22/7/2011 (3)
+RESERVACION--(10/7/2011)
+ Titular: 31111111
+ Habitacion INDV del 11/7/2011 al 13/7/2011 (2)
+RESERVACION--(11/7/2011)
+ Titular: 41111111
+ Habitacion INDV del 12/7/2011 al 15/7/2011 (3)
+CHECK_IN-----(12/7/2011 15:02)
+ Titular: 41111111
+ Habitacion: 001001
+RESERVACION--(14/7/2011)
+ Titular: 51111111
+ Habitacion INDV del 16/7/2011 al 22/7/2011 (6)
+RESERVACION--(15/7/2011)
+ Titular: 99111111
+ Habitacion MATRI del 16/7/2011 al 18/7/2011 (2)
+RESERVACION--(15/7/2011)
+ Titular: 98811111
+ Habitacion INDV del 19/7/2011 al 22/7/2011 (3)
+RESERVACION--(22/7/2011)
+ Titular: 61111111
+ Habitacion SUITE del 27/7/2011 al 5/8/2011 (-22)
+RESERVACION--(22/7/2011)
+ Titular: 81111111
+ Habitacion INDV del 29/7/2011 al 2/8/2011 (-27)
+RESERVACION--(22/7/2011)
+ Titular: 12345678
+ Habitacion INDV del 25/7/2011 al 2/8/2011 (-23)
+RESERVACION--(22/7/2011)
+ Titular: 12345679
+ Habitacion INDV del 3/8/2011 al 5/8/2011 (2)
+CHECK_IN-----(25/7/2011 17:33)
+ Titular: 61111111
+ Habitacion: 002002
+RESERVACION--(26/7/2011)
+ Titular: 13246578
+ Habitacion INDV del 29/7/2011 al 6/8/2011 (-23)
+CHECK_OUT-----(28/7/2011 9:00)
+ Titular: 61111111
+ Cancelo: -19800.0

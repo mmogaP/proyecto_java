@@ -1,0 +1,42 @@
+Del 26/07/2011 al 29/07/2011 0			Reservaciones canceladas
+Del 29/07/2011 al 31/07/2011 0			Reservaciones canceladas
+Del 08/07/2011 al 15/08/2011 0			Reservaciones efectivas
+Del 08/07/2011 al 12/07/2011 0			Reservaciones efectivas
+Del  08/07/2011 al 15/08/2011 0.0			Ingresos por camas adicionales
+Del  08/07/2011 al 12/07/2011 0.0			Ingresos por camas adicionales
+Del  08/07/2011 al 15/08/2011 9			Transferencias totales
+Del  08/07/2011 al 12/07/2011 1			Transferencias totales
+Del  08/07/2011 al 15/08/2011 50.0			Ingresos por uso de caja fuerte
+Del  08/07/2011 al 12/07/2011 0.0			Ingresos por uso de caja fuerte
+Al  28/7/2011 1                 			Habitaciones ocupadas
+Al  28/7/2011 3                 			Habitaciones libres
+Del  09/07/2011 al 16/07/2011       			% de ocupacion diaria
+                             0%          Dia1
+                             0%          Dia2
+                             0%          Dia3
+                             16%          Dia4
+                             16%          Dia5
+                             16%          Dia6
+                             16%          Dia7
+Del  09/07/2011 al 16/07/2011 9%    			Promedio de % de ocupacion diaria
+Del 26/07/2011 al 29/07/2011 0			Reservaciones canceladas
+Del 29/07/2011 al 31/07/2011 0			Reservaciones canceladas
+Del 08/07/2011 al 15/08/2011 0			Reservaciones efectivas
+Del 08/07/2011 al 12/07/2011 0			Reservaciones efectivas
+Del  08/07/2011 al 15/08/2011 0.0			Ingresos por camas adicionales
+Del  08/07/2011 al 12/07/2011 0.0			Ingresos por camas adicionales
+Del  08/07/2011 al 15/08/2011 18			Transferencias totales
+Del  08/07/2011 al 12/07/2011 2			Transferencias totales
+Del  08/07/2011 al 15/08/2011 100.0			Ingresos por uso de caja fuerte
+Del  08/07/2011 al 12/07/2011 0.0			Ingresos por uso de caja fuerte
+Al  28/7/2011 1                 			Habitaciones ocupadas
+Al  28/7/2011 3                 			Habitaciones libres
+Del  09/07/2011 al 16/07/2011       			% de ocupacion diaria
+                             0%          Dia1
+                             0%          Dia2
+                             0%          Dia3
+                             33%          Dia4
+                             33%          Dia5
+                             33%          Dia6
+                             33%          Dia7
+Del  09/07/2011 al 16/07/2011 18%    			Promedio de % de ocupacion diaria

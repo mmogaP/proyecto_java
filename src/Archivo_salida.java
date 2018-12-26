@@ -10,7 +10,7 @@ public class Archivo_salida {
 				f.createNewFile();
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("RESERVACIÓN--"+"("+fecha+")");
+				wr.println("RESERVACION--"+"("+fecha+")");
 				wr.println(" Titular: "+titular);
 				wr.println(" Habitacion "+tipo+" del "+check_in+" al "+check_up+" ("+dias+")");
 				wr.close();				
@@ -24,7 +24,7 @@ public class Archivo_salida {
 			try {
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("RESERVACIÓN--"+"("+fecha+")");
+				wr.println("RESERVACION--"+"("+fecha+")");
 				wr.println(" Titular: "+titular);
 				wr.println(" Habitacion "+tipo+" del "+check_in+" al "+check_up+" ("+dias+")");
 				wr.close();		
@@ -45,7 +45,7 @@ public class Archivo_salida {
 				f.createNewFile();
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("CANCELACIÓN--"+"("+fecha+" "+hora+")");
+				wr.println("CANCELACION--"+"("+fecha+" "+hora+")");
 				wr.println(" Titular: "+titular);
 				wr.close();				
 				w.close();
@@ -58,7 +58,7 @@ public class Archivo_salida {
 			try {
 				w = new FileWriter(f,true);
 				wr = new PrintWriter(w);
-				wr.println("CANCELACIÓN--"+"("+fecha+" "+hora+")");
+				wr.println("CANCELACION--"+"("+fecha+" "+hora+")");
 				wr.println(" Titular: "+titular);
 				wr.close();		
 				w.close();

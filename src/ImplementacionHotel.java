@@ -6,7 +6,7 @@ public class ImplementacionHotel {
 		Archivo_Leer texto_ini = new Archivo_Leer();//creo un nuevo objeto para leer el archivo inicial
 		Hotel hot = new Hotel();//creo el objeto hotel para llenar variables de hotel
 		Presupuesto pre = new Presupuesto();
-		texto_ini.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\inicializar.txt");//se le da el primer archivo que contiene la info del hotel
+		texto_ini.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\inicializar.in");//se le da el primer archivo que contiene la info del hotel
 		hot.setPresupuesto(Double.parseDouble(texto_ini.getLinea(0)));//desde el archivo inicilaizar le paso la variable presupuesto al hotel		
 		String aux=texto_ini.getLinea(1);//le doy la linea donde va la fecha
 		String[] fecha_ = aux.split(" ");//separa la fecha por los espacios
@@ -29,7 +29,7 @@ public class ImplementacionHotel {
 		/////////////////////////////////////Precios
 		Archivo_Leer texto_pre = new Archivo_Leer();//creo un nuevo objeto para leer el archivo de los precios
 		Precio precio = new Precio();
-		texto_pre.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\precios.txt");//aca se le da la direccion
+		texto_pre.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\precios.in");//aca se le da la direccion
 		String parametros = texto_pre.getLinea(0);//Se le da el tipo de habitacion y los servicios que pide
 		String[] parametros2 = parametros.split(" ");
 		int num_hab = Integer.parseInt(parametros2[0]);
@@ -58,16 +58,16 @@ public class ImplementacionHotel {
 		///////////////////////////////////////////////////////////////////////////////////
 		///////////////////////////////////////////////////////////////////////////////////
 		Archivo_Leer op = new Archivo_Leer();//ahora la ultima parte lee lo que sucede en el hotel
-		op.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\operaciones.txt");
+		op.leerArchivo("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\operaciones.in");
 		for(int i = 0;i<op.getTamaño();i++) {//se recorre segun el tamaño del texto que puede ir variando
 			if(hot.getDd()==15) {
 				hot.gastoM();
-				pre.setEgreso("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", "Nómina", 25000.00, hot.getSaldo(), hot.getFecha());
+				pre.setEgreso("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\contabilidad.txt", "Nomina", 25000.00, hot.getSaldo(), hot.getFecha());
 			}
 			if((op.getLinea(i)).equals("0")) {//si es 0 avanza el dia 
 				hot.agregarDia();
 			}
-			else if(op.getLinea(i).equals("1")) {//al tomar un uno hace la reservación de la persona
+			else if(op.getLinea(i).equals("1")) {//al tomar un uno hace la reservacion de la persona
 				String linea = op.getLinea(i+1);
 				String[] check=linea.split(" ");
 				linea = op.getLinea(i+2);
@@ -207,7 +207,9 @@ public class ImplementacionHotel {
 					}
 					i=i+3+cantidad_serv+cantd_platos;
 				}
-				
+				else {
+					i=i+3+cantidad_serv;
+				}
 			}
 			
 			else if(op.getLinea(i).equals("7")) {//por ultimo devuelve los reportes y se le pide cuantos quiere hacer
@@ -304,4 +306,3 @@ public class ImplementacionHotel {
 		}				
 	}
 }
-
