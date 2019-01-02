@@ -35,7 +35,7 @@ public class VistaCancelar extends JFrame{
 	}
 	
 	private void etiquetas() {
-		etiqueta = new JLabel("Cancelar reserva / Ingrese fecha:");
+		etiqueta = new JLabel("Cancelar reserva / Ingrese titular:");
 		etiqueta.setBounds(10, 10, 500, 30);
 		etiqueta.setFont(new Font("Times New Roman", 0,15));
 		panel.add(etiqueta);
