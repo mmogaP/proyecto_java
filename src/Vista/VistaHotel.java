@@ -50,5 +50,7 @@ public class VistaHotel extends JFrame{
 	
 	public static void main(String[] args) {
 		VistaHotel hot = new VistaHotel();
+		VistaCancelar hot2 = new VistaCancelar();
+		hot2.setVisible(true);
 	}
 }
