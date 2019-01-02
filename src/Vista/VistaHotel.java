@@ -4,10 +4,11 @@ import java.awt.*;
 import javax.swing.*;
 
 public class VistaHotel extends JFrame{
-	JButton botonreservacion,botoncancelacion,bcheck_in,bcheck_out,breportes,barchivos,bservicios,brestaurant;
-	JTextField ingreso,transformado;
+	private JButton botonreservacion,botoncancelacion,bcheck_in,bcheck_out,breportes,barchivos,bservicios,brestaurant;
+	private JTextField ingreso,transformado;
 	JLabel tex;
 	public VistaHotel() {
+		setTitle("Hotel mi Refugio");
 		setLayout(null);
 		tex = new JLabel("Hotel Mi Refugio");
 		tex.setBounds(270,15,200,50);
@@ -21,7 +22,7 @@ public class VistaHotel extends JFrame{
 		
 	}
 	public void setBotones() {
-		botonreservacion = new JButton("Reservar");
+		botonreservacion = new JButton("Reservas");
 		botonreservacion.setBounds(50, 80, 100, 50);
 		add(botonreservacion);
 		botoncancelacion = new JButton("Cancelar");
