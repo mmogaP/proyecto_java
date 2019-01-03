@@ -19,7 +19,7 @@ public class ControladorHotel implements ActionListener{
 	}
 	private void setReserva() {
 		ControladorReserva contres = new ControladorReserva();
-		
+		System.out.println(contres.getFecha1());
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
