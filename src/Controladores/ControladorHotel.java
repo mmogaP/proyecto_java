@@ -2,12 +2,13 @@ package Controladores;
 import java.awt.*;
 import java.awt.event.*;
 import Vista.*;
-import ;
+import hotel.proces.*;
 public class ControladorHotel implements ActionListener{
 	VistaHotel vista;
 	Hotel hot;
 	public ControladorHotel(VistaHotel vista) {
 		this.vista = vista;
+		hot = new Hotel();
 		this.vista.botonreservacion.addActionListener(this);
 		this.vista.botoncancelacion.addActionListener(this);
 		this.vista.bcheck_in.addActionListener(this);

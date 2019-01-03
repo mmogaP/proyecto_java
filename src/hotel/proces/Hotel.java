@@ -9,19 +9,31 @@ int dd;
 int mm;
 int aa;
 ///////////////////////////////////////
-public void gastoM() {
+public void gastoM() {//gasto mensual
 	this.presupuesto=presupuesto - 25000.00;
 }
-public void setPiso(int num) {
+public void setPiso(int num) {//crea el piso
 	Piso aux2 = new Piso(num);
 	hotel.add(aux2);
 }
-public void getReservar(int piso,int habitacion,int adul,int infantes,String titular) {
+public void getReservar(int piso,int habitacion,int adul,int infantes,String titular) {//crea la reserva
 	hotel.get(piso).setReservar(habitacion, adul, infantes, titular);
-	
+}
+public int[] setReservacion(String tipo) {//busca habitacion para la reserva
+	int[] cord = new int[2];
+	for(int i = 0;i<mun_pisos;i++) {
+		for(int y = 0;y<getNum_habitaciones_x_piso(i);y++) {
+			if(getEstado(i,y).equals("Libre")&&(getTipo(i, y).equals(tipo))) {//si encuentra una habitacion libre se le asigna y listo
+				cord[0]=i;
+				cord[1]=y;
+				return cord;
+			}
+		}
+	}
+	return cord;
 }
 public void checkFull(int piso,int habitacion,int dd1,int mm1,int aa1,int dd2,int mm2,int aa2) {
-	hotel.get(piso).getCheck(habitacion, dd1, mm1, aa1, dd2, mm2, aa2);
+	hotel.get(piso).checkFull(habitacion, dd1, mm1, aa1, dd2, mm2, aa2);
 }
 public void agregarDia() {
 	int[] dias = {31,28,31,30,31,30,31,31,30,31,30,31};
