@@ -2,8 +2,10 @@ package Controladores;
 import java.awt.*;
 import java.awt.event.*;
 import Vista.*;
+import ;
 public class ControladorHotel implements ActionListener{
 	VistaHotel vista;
+	Hotel hot;
 	public ControladorHotel(VistaHotel vista) {
 		this.vista = vista;
 		this.vista.botonreservacion.addActionListener(this);
@@ -16,6 +18,7 @@ public class ControladorHotel implements ActionListener{
 	}
 	private void setReserva() {
 		ControladorReserva contres = new ControladorReserva();
+		
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

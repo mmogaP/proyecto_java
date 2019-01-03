@@ -24,18 +24,21 @@ public class VistaReserva extends JFrame {
 		cuadro1 = new JTextField();
 		cuadro1.setBounds(110, 60, 100, 25);
 		add(cuadro1);
+		////////////////////////////////////////////////
 		tex2 = new JLabel("Fecha de Salida:");
 		tex2.setBounds(10, 100, 100, 50);
 		add(tex2);
 		cuadro2 = new JTextField();
 		cuadro2.setBounds(110, 110, 100, 25);
 		add(cuadro2);
+		//////////////////////////////////////////////////
 		tex3 = new JLabel("Habitacion:");
 		tex3.setBounds(10, 150, 100, 50);
 		add(tex3);
 		cuadro3 = new JTextField();
 		cuadro3.setBounds(110, 160, 100, 25);
 		add(cuadro3);
+		//////////////////////////////////////////////////
 		tex4 = new JLabel("Personas  Ingresar:");
 		tex4.setBounds(10, 200, 130, 50);
 		add(tex4);

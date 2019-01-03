@@ -1,3 +1,4 @@
+import hotel.proces.Hotel;
 
 public class ImplementacionHotel {
 

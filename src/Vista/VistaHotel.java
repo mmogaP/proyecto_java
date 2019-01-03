@@ -4,9 +4,9 @@ import java.awt.*;
 import javax.swing.*;
 
 public class VistaHotel extends JFrame{
-	private JButton botonreservacion,botoncancelacion,bcheck_in,bcheck_out,breportes,barchivos,bservicios,brestaurant;
+	public JButton botonreservacion,botoncancelacion,bcheck_in,bcheck_out,breportes,barchivos,bservicios,brestaurant;
 	private JTextField ingreso,transformado;
-	JLabel tex;
+	private JLabel tex;
 	public VistaHotel() {
 		setTitle("Hotel mi Refugio");
 		setLayout(null);

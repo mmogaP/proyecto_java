@@ -1,3 +1,4 @@
+package hotel.proces;
 import java.util.ArrayList;
 
 public class Piso {

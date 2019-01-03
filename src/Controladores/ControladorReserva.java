@@ -14,10 +14,10 @@ public class ControladorReserva implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource().equals(this.vista.botona)) {
-			vista.setCerrar();
+			
 		}
 		else if(arg0.getSource().equals(this.vista.botonc)) {
-			
+			vista.setCerrar();
 		}
 	}
 }

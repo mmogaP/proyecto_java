@@ -1,3 +1,4 @@
+package hotel.proces;
 
 public class Habitacion {
 int camas_ind;
