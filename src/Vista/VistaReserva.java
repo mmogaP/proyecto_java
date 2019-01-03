@@ -6,7 +6,7 @@ public class VistaReserva extends JFrame {
 	private JLabel tex,tex1,tex2,tex3,tex4;
 	private JTextField cuadro1,cuadro2,cuadro3;
 	private TextArea texa;
-	private JButton botona,botonc;
+	public JButton botona,botonc;
 	public VistaReserva(){
 		setLayout(null);
 		setTitle("Reservar");
@@ -16,10 +16,7 @@ public class VistaReserva extends JFrame {
 		tex.setFont(new java.awt.Font("Tahoma", 1, 15));
 		add(tex);
 		setIngresoText();
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-	}
+		}
 	private void setIngresoText() {
 		tex1= new JLabel("Fecha Ingreso:");
 		tex1.setBounds(10,50,100,50);
@@ -51,5 +48,37 @@ public class VistaReserva extends JFrame {
 		botonc = new JButton("Cancelar");
 		botonc.setBounds(200, 500, 100, 25);
 		add(botonc);
+	}
+	public void setIniciar() {
+		setVisible(true);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	public void setCerrar() {
+		setVisible(false);
+	}
+	public String getCuadro1() {
+		return cuadro1.getText();
+	}
+	public String getCuadro2() {
+		return cuadro2.getText();
+	}
+	public String getCuadro3() {
+		return cuadro3.getText();
+	}
+	public String getTexa() {
+		return texa.getText();
+	}
+	public void setCuadro1(String text) {
+		this.cuadro1.setText(text);
+	}
+	public void setCuadro2(JTextField cuadro2) {
+		this.cuadro2 = cuadro2;
+	}
+	public void setCuadro3(JTextField cuadro3) {
+		this.cuadro3 = cuadro3;
+	}
+	public void setTexa(TextArea texa) {
+		this.texa = texa;
 	}
 }
