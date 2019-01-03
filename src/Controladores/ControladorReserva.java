@@ -2,11 +2,14 @@ package Controladores;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Vista.VistaReserva;
+import hotel.proces.*;
 public class ControladorReserva implements ActionListener {
 	VistaReserva vista;
 	String fecha1,fecha2,tipo;
 	String[] personas;
-	public ControladorReserva() {
+	Hotel hot;
+	public ControladorReserva(Hotel hot) {
+		this.hot = hot;
 		this.vista = new VistaReserva();
 		this.vista.setIniciar();
 		this.vista.botona.addActionListener(this);
