@@ -18,7 +18,7 @@ public class ControladorHotel implements ActionListener{
 		this.vista.bservicios.addActionListener(this);
 	}
 	private void setReserva() {
-		ControladorReserva contres = new ControladorReserva();
+		ControladorReserva contres = new ControladorReserva(hot);
 		System.out.println(contres.getFecha1());
 	}
 	@Override
