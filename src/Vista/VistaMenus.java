@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class VistaMenu extends JFrame{
+public class VistaMenus extends JFrame{
 	public JPanel panel;
 	public JLabel etiqueta;
 	public JButton boton1, boton2, boton3, boton4;
@@ -22,7 +22,7 @@ public class VistaMenu extends JFrame{
 	String[] menu = new String[12];
 	String comida;
 	
-	public VistaMenu() {
+	public VistaMenus() {
 		setBounds(500, 500, 520,400);
 		iniciarComp();
 	}
