@@ -1,3 +1,4 @@
+package Archivos;
 import java.io.*;
 public class Archivo_salida {
 	public void escribirArch_Res(String nombre,String fecha,String check_in,String check_up,String titular,String tipo,int dias) {

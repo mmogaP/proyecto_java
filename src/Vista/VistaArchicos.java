@@ -69,4 +69,10 @@ public class VistaArchicos extends JFrame {
 			cuadro1.setText(chooser.getSelectedFile().getAbsolutePath());
 		} 
 	}
+	public String direccionArchI() {
+		return cuadro.getText();
+	}
+	public String direccionArchP() {
+		return cuadro1.getText();
+	}
 }

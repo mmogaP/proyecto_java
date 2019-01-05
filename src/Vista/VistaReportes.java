@@ -84,18 +84,7 @@ public class VistaReportes extends JFrame {
 		boton1 = new JButton("Mostrar Reporte");
 		boton1.setBounds(150, 80, 150, 40);
 		panel.add(boton1);
-		
-		//action listener
-		ActionListener oyente1 = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//cerrar y guardar variable al ingresar
-			}		
-		};
-		
-		boton1.addActionListener(oyente1);
-	}
+		}
 	private void combobox() {
 		combo = new JComboBox<String>();
 		combo.setBounds(10, 40, 200, 30);

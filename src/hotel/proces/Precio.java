@@ -1,3 +1,4 @@
+package hotel.proces;
 import java.util.ArrayList;
 public class Precio {
 	double precioind;
@@ -90,5 +91,11 @@ public class Precio {
 			}
 		}
 		return "";
+	}
+	public ArrayList<String> getNombre_menu1() {
+		return nombre_menu;
+	}
+	public ArrayList<String> getFormato_menu(){
+		return formato_menu;
 	}
 }

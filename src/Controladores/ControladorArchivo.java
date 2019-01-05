@@ -25,7 +25,9 @@ public class ControladorArchivo implements ActionListener{
 			this.vista.archBuscar1();
 		}
 		else if(e.getSource().equals(this.vista.botona)) {
-			
+			this.modelo.iniciarHotel(this.vista.direccionArchI());
+			this.modelo.iniciarPrecios(this.vista.direccionArchP());
+			this.vista.cerrarVista();
 		}
 		else if(e.getSource().equals(this.vista.botonc)) {
 			this.vista.cerrarVista();

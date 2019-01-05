@@ -27,6 +27,7 @@ public class ControladorReserva implements ActionListener {
 			fecha2 = vista.getCuadro2();
 			tipo = vista.getCuadro3();
 			personas = vista.getTexa().split("\n");
+			modelo.setReserva(tipo, personas, fecha1, fecha2);
 			vista.setCerrar();
 		} else if (arg0.getSource().equals(this.vista.botonc)) {
 			vista.setCerrar();

@@ -3,6 +3,7 @@ package Vista;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -11,28 +12,28 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class VistaMenu extends JFrame{
 	public JPanel panel;
-	public JLabel etiqueta;
-	public JButton boton1, boton2, boton3, boton4;
+	public JLabel etiqueta,etiqueta2;
+	public JTextField caja1;
+	public JButton boton1, boton3, boton4;
 	public JComboBox<String> combo;
 	public JTextArea textArea;
-	
-	String[] menu = new String[12];
 	String comida;
 	
-	public VistaMenu() {
+	public VistaMenu(ArrayList<String> menu) {
 		setBounds(500, 500, 520,400);
-		iniciarComp();
+		iniciarComp(menu);
 	}
 	
-	private void iniciarComp() {
+	private void iniciarComp(ArrayList<String> menu) {
 		panel();
 		etiquetas();
 		ingreso();
 		botones();
-		combobox();
+		combobox(menu);
 	}
 	
 	private void panel() {
@@ -46,6 +47,10 @@ public class VistaMenu extends JFrame{
 		etiqueta.setBounds(10, 10, 500, 30);
 		etiqueta.setFont(new Font("Times New Roman", 0,20));
 		panel.add(etiqueta);
+		etiqueta2 = new JLabel("Titular");
+		etiqueta2.setBounds(340,150,150,40);
+		etiqueta2.setFont(new Font("Times New Roman", 0,20));
+		panel.add(etiqueta2);
 	}
 	
 	private void ingreso() {
@@ -53,88 +58,46 @@ public class VistaMenu extends JFrame{
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
         textArea.setBounds(10, 50, 320, 290);
- 
         JScrollPane scroll=new JScrollPane(textArea);
         scroll.setBounds(10, 50, 320, 290);
         panel.add(scroll);
+        
+        caja1 = new JTextField();
+        caja1.setBounds(340,190,150,30);
+        panel.add(caja1);
 	}
 	
 	private void botones() {
 		boton1 = new JButton("Ingresar orden");
 		boton1.setBounds(340, 50, 150, 40);
 		panel.add(boton1);
-		
-		//action listener
-		ActionListener oyente1 = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//cerrar y guardar variable al ingresar
-			}		
-		};
-		
-		boton1.addActionListener(oyente1);
-		
-		boton2 = new JButton("Cancelar orden");
-		boton2.setBounds(340, 105, 150, 40);
-		panel.add(boton2);
-		
-		//action listener
-		ActionListener oyente2 = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//cerrar y guardar variable al ingresar
-			}		
-		};
-		
-		boton2.addActionListener(oyente2);
-		
 		boton3 = new JButton("Enviar orden");
 		boton3.setBounds(340, 245, 150, 40);
 		panel.add(boton3);
-		
-		//action listener
-		ActionListener oyente3 = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//cerrar y guardar variable al ingresar
-			}		
-		};
-		
-		boton3.addActionListener(oyente3);
-		
 		boton4 = new JButton("Cancelar todo");
 		boton4.setBounds(340, 299, 150, 40);
 		panel.add(boton4);
-		
-		//action listener
-		ActionListener oyente4 = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//cerrar y guardar variable al ingresar
-			}		
-		};
-		
-		boton4.addActionListener(oyente4);
 	}
-	private void combobox() {
+	private void combobox(ArrayList<String> menu) {
 		combo = new JComboBox<String>();
 		combo.setBounds(120, 10, 200, 30);
-		combo.addItem(menu[0]);
-		
+		for(int i=0;i<menu.size();i++) {
+			combo.addItem(menu.get(i));
+		}
 		panel.add(combo);
-		
-		combo.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//.setText(combo.getSelectedItem().toString());
-				//opciones = .getText();
-			}
-		});
-		
-	
+	}
+	public String getTextB() {
+		return (String) combo.getSelectedItem();
+	}
+	public void setTextA(String men) {
+		String aux = textArea.getText();
+		aux = aux+men+"\n";
+		textArea.setText(aux);
+	}
+	public String getText() {
+		return caja1.getText();
+	}
+	public String getTexta() {
+		return textArea.getText();
 	}
 }

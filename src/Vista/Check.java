@@ -52,16 +52,8 @@ public class Check extends JFrame{
 		boton1 = new JButton("INGRESAR");
 		boton1.setBounds(60, 90, 100, 40);
 		panel.add(boton1);
-		
-		//action listener
-		ActionListener oyente1 = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//cerrar y guardar variable al ingresar
-			}		
-		};
-		
-		boton1.addActionListener(oyente1);
+	}
+	public String getText() {
+		return caja1.getText();
 	}
 }

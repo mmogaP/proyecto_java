@@ -16,7 +16,7 @@ public void setPiso(int num) {//crea el piso
 	Piso aux2 = new Piso(num);
 	hotel.add(aux2);
 }
-public void getReservar(int piso,int habitacion,int adul,int infantes,String titular) {//crea la reserva
+public void setReservar(int piso,int habitacion,int adul,int infantes,String titular) {//crea la reserva
 	hotel.get(piso).setReservar(habitacion, adul, infantes, titular);
 }
 public int[] setReservacion(String tipo) {//busca habitacion para la reserva

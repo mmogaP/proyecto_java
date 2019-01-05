@@ -55,7 +55,6 @@ public class VistaReserva extends JFrame {
 	public void setIniciar() {
 		setVisible(true);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	public void setCerrar() {
 		setVisible(false);

@@ -1,4 +1,9 @@
+import Archivos.Archivo_Leer;
+import Archivos.Archivo_salida;
+import Archivos.Presupuesto;
+import Archivos.Reportes;
 import hotel.proces.Hotel;
+import hotel.proces.Precio;
 
 public class ImplementacionHotel {
 
@@ -106,8 +111,7 @@ public class ImplementacionHotel {
 						infantes++;
 					}	
 				}
-				hot.getEstado(habitacion_libre[0], habitacion_libre[1]);
-				hot.getReservar(habitacion_libre[0], habitacion_libre[1], adult, infantes, titular);
+				hot.setReservar(habitacion_libre[0], habitacion_libre[1], adult, infantes, titular);
 				i=i+3+Integer.parseInt(op.getLinea(i+3));
 				Archivo_salida m = new Archivo_salida();//una vez hecho esto creo el archivo de salida donde muestro todos los datos, la reservacion, el check-in y el check-out y si cancelo. 
 				m.escribirArch_Res("C:\\Users\\Abuelo\\eclipse-workspace\\Hotel1\\txt\\salida.txt",hot.getFecha(),hot.getFecha_in(habitacion_libre[0], habitacion_libre[1]),hot.getFecha_out(habitacion_libre[0], habitacion_libre[1]),titular,hot.getTipo(habitacion_libre[0], habitacion_libre[1]),hot.getDias(habitacion_libre[0], habitacion_libre[1]));
